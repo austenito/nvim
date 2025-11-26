@@ -6,7 +6,13 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         javascript = { "prettierd", "prettier", stop_after_first = true },
-        markdown = { "prettierd", "prettier", stop_after_first = true },
+        markdown = { "markdownprettier" },
+      },
+      formatters = {
+        markdownprettier = {
+          command = "prettier",
+          args = { "--stdin-filepath", "$FILENAME", "--print-width", "120", "--prose-wrap", "always" },
+        },
       },
       format_on_save = {
         timeout_ms = 500,
