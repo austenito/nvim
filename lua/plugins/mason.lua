@@ -22,12 +22,16 @@ return {
       require("mason-tool-installer").setup {
         ensure_installed = {
           -- install language servers
+          "basedpyright",
           "gopls",
           "lua-language-server",
           "marksman",
+          "vtsls",
 
           -- install formatters
           "stylua",
+          "prettierd",
+          "prettier",
 
           -- other packages
           "tree-sitter-cli",
