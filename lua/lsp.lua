@@ -1,6 +1,12 @@
-vim.lsp.enable "basedpyright"
 vim.lsp.config("basedpyright", {
   settings = {
+    cmd = { "basedpyright-langserver", "--stdio" },
+    root_markers = {
+      "pyproject.toml",
+      "setup.py",
+      ".venv",
+      ".git",
+    },
     basedpyright = {
       analysis = {
         typeCheckingMode = "basic", -- "off", "basic", "standard", "strict", "all"
@@ -9,14 +15,10 @@ vim.lsp.config("basedpyright", {
         autoSearchPaths = true,
         autoImportCompletions = true,
       },
-      python = {
-        pythonPath = vim.fn.getcwd() .. "/.venv/bin/python",
-        venvPath = ".",
-        venv = ".venv",
-      },
     },
   },
 })
+vim.lsp.enable "basedpyright"
 
 vim.lsp.enable "lua_ls"
 vim.lsp.config("lua_ls", {})
