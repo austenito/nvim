@@ -1,12 +1,15 @@
 vim.lsp.config("basedpyright", {
+  cmd = { "basedpyright-langserver", "--stdio" },
+  root_markers = {
+    "pyproject.toml",
+    "setup.py",
+    ".venv",
+    ".git",
+  },
+  filetypes = { "python" },
   settings = {
-    cmd = { "basedpyright-langserver", "--stdio" },
-    filetypes = { "python" },
-    root_markers = {
-      "pyproject.toml",
-      "setup.py",
-      ".venv",
-      ".git",
+    python = {
+      pythonPath = vim.fn.getcwd() .. "/.venv/bin/python",
     },
     basedpyright = {
       analysis = {
