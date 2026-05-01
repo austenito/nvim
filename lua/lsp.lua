@@ -31,3 +31,9 @@ vim.lsp.enable "vtsls"
 vim.lsp.config("vtsls", {})
 
 vim.keymap.set("n", "gd", "<C-]>", { remap = false, silent = true, desc = "LSP - Go to definition" })
+
+vim.filetype.add {
+  extension = {
+    mdc = "markdown",
+  },
+}
