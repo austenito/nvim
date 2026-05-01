@@ -13,4 +13,4 @@ require "lsp"
 -- [[ Setup lazy plugin manager ]]
 require "config.lazy"
 
-vim.cmd.colorscheme "kanagawa-dragon"
+vim.cmd.colorscheme "kanagawa-wave"
