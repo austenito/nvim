@@ -16,9 +16,9 @@ require "config.lazy"
 local hour = tonumber(os.date "%H")
 if hour >= 7 and hour < 18 then
   vim.o.background = "light"
-  vim.cmd.colorscheme "tokyonight-day"
+  vim.cmd.colorscheme "dayfox"
 else
   -- Night theme
   vim.o.background = "dark"
-  vim.cmd.colorscheme "tokyonight-moon"
+  vim.cmd.colorscheme "nightfox"
 end
